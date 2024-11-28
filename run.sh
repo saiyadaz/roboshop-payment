@@ -1,0 +1,8 @@
+source /data/secrets
+
+if [ -z "$CART_HOST" -o -z "$CART_PORT"-o -z "$USER_HOST"-o -z "$AMQP_HOST"-o -z "$AMQP_USER"-o -z "$AMQP_PASS" ]; then
+  echo Environment VariableS  is mising
+  exit 1
+fi
+
+uwsgi --ini payment.ini
