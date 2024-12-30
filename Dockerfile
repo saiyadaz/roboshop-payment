@@ -1,4 +1,4 @@
-FROM               docker.io/python3.6
+FROM               docker.io/python:3.6
 RUN                mkdir /app
 COPY               ./ /app/
 WORKDIR            /app
